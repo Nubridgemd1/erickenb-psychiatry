@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ErickenB Psychiatry — Admin</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root{--navy:#0e2a5e;--navy2:#13397f;--sky:#3f9fe0;--sky2:#7ec8f2;--skywash:#e9f3fc;--cream:#f6fafe;--ink:#15233c;--muted:#5b6b85;--line:#dce7f3}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--navy)}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+  .top{background:linear-gradient(135deg,#0e2a5e,#1b4aa0);color:#fff;padding:26px 0}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .top h1{color:#fff;font-size:24px}
+  .top .sub{color:#bcd2ee;font-size:13px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;padding:11px 20px;border-radius:30px;border:1.5px solid transparent;cursor:pointer;transition:.2s;font-family:inherit}
+  .btn.sky{background:linear-gradient(135deg,var(--sky),var(--navy2));color:#fff}
+  .btn.ghost{background:#fff;border-color:var(--line);color:var(--navy)}
+  .btn.sm{padding:8px 14px;font-size:13px}
+  .btn.danger{background:#fff;border-color:#f0c2c2;color:#b23}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin:18px 0;box-shadow:0 8px 22px rgba(14,42,94,.05)}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 0}
+  .tab{padding:10px 18px;border-radius:30px;border:1px solid var(--line);background:#fff;cursor:pointer;font-weight:600;font-size:14px;color:var(--muted)}
+  .tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .field{margin-bottom:14px}
+  label{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);font-weight:700;margin-bottom:5px}
+  input,textarea{width:100%;font-family:inherit;font-size:15px;padding:11px 13px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+  input:focus,textarea:focus{outline:none;border-color:var(--sky)}
+  .hint{font-size:12px;color:var(--muted);margin-top:4px}
+  .gate{max-width:380px;margin:80px auto;text-align:center}
+  .hidden{display:none}
+  .cmt{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:var(--cream)}
+  .cmt .who{font-weight:700;color:var(--navy);font-size:14px}
+  .cmt .when{color:var(--muted);font-size:11.5px;font-weight:400}
+  .cmt .txt{margin:4px 0 8px;color:#39455c;font-size:14.5px}
+  .cmt .post{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--sky);font-weight:700;margin-bottom:6px}
+  .reply{margin:8px 0 0 16px;background:#eaf3fc;border-left:3px solid var(--sky);border-radius:0 8px 8px 0;padding:9px 12px}
+  .reply .who{color:var(--navy)}
+  .replybox{margin-top:8px;display:flex;gap:8px}
+  .replybox input{flex:1}
+  .copybox{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px}
+  .copybox .lbl{font-weight:700;color:var(--navy);font-size:13px;margin-bottom:6px}
+  .copybox pre{white-space:pre-wrap;font-family:inherit;font-size:13.5px;color:#39455c;margin-bottom:8px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--sky);text-transform:uppercase;font-size:11px;letter-spacing:.06em}
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 20px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;z-index:50}
+  .toast.show{opacity:1}
+  .empty{color:var(--muted);font-style:italic;font-size:14px}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><div><h1>ErickenB Psychiatry — Admin</h1><div class="sub">Manage content, reply to comments, view bookings</div></div><a class="btn ghost" href="index.html">View site &#8599;</a></div></div>
+
+<!-- GATE -->
+<div class="wrap gate" id="gate">
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:6px">Admin access</h2>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:16px">Enter the passcode to continue.</p>
+    <div class="field"><input id="pass" type="password" placeholder="Passcode" onkeydown="if(event.key==='Enter')unlock()"></div>
+    <button class="btn sky" onclick="unlock()" style="width:100%;justify-content:center">Unlock</button>
+  </div>
+</div>
+
+<!-- CONSOLE -->
+<div class="wrap hidden" id="console">
+  <div class="tabs">
+    <div class="tab on" data-t="update" onclick="tab('update')">Update</div>
+    <div class="tab" data-t="comments" onclick="tab('comments')">Comments</div>
+    <div class="tab" data-t="bookings" onclick="tab('bookings')">Bookings</div>
+    <div class="tab" data-t="kit" onclick="tab('kit')">Marketing Kit</div>
+    <div class="tab" data-t="settings" onclick="tab('settings')">Settings</div>
+  </div>
+
+  <!-- UPDATE -->
+  <div class="card tabpane" id="p-update">
+    <h2 style="font-size:20px;margin-bottom:4px">Practice details</h2>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:16px">These update the live site instantly on this device.</p>
+    <div class="field"><label>Provider name</label><input id="c_providerName"></div>
+    <div class="field"><label>Phone</label><input id="c_phone"></div>
+    <div class="field"><label>Email</label><input id="c_email"></div>
+    <div class="field"><label>Office address</label><input id="c_address"></div>
+    <div class="field"><label>About / bio</label><textarea id="c_bio" rows="3"></textarea></div>
+    <div class="field"><label>Payment link (Stripe/Square) — optional</label><input id="c_paymentLink" placeholder="https://..."><div class="hint">When set, card bookings open this secure payment page.</div></div>
+    <div class="field"><label>Booking endpoint (FormSubmit/Web3Forms) — optional</label><input id="c_bookingEndpoint" placeholder="https://..."><div class="hint">When set, booking requests are emailed here; otherwise saved under Bookings.</div></div>
+    <div class="field"><label>Comments endpoint — optional</label><input id="c_commentsEndpoint" placeholder="https://..."><div class="hint">When set, new comments are also emailed to you.</div></div>
+    <button class="btn sky" onclick="saveCfg()">Save changes</button>
+  </div>
+
+  <!-- COMMENTS -->
+  <div class="card tabpane hidden" id="p-comments">
+    <h2 style="font-size:20px;margin-bottom:4px">Comments</h2>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:16px">Reply to readers — your replies appear under their comment on the blog, badged as Provider.</p>
+    <div id="cmtList"></div>
+  </div>
+
+  <!-- BOOKINGS -->
+  <div class="card tabpane hidden" id="p-bookings">
+    <h2 style="font-size:20px;margin-bottom:4px">Appointment requests</h2>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:16px">Saved on this device when no booking endpoint is set.</p>
+    <div id="bkList"></div>
+    <div style="margin-top:14px"><button class="btn ghost sm" onclick="exportBookings()">Export CSV</button></div>
+  </div>
+
+  <!-- KIT -->
+  <div class="card tabpane hidden" id="p-kit">
+    <h2 style="font-size:20px;margin-bottom:4px">Marketing kit</h2>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:16px">Ready-to-post copy. Tap Copy and paste anywhere.</p>
+    <div id="kitList"></div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="card tabpane hidden" id="p-settings">
+    <h2 style="font-size:20px;margin-bottom:4px">Settings</h2>
+    <div class="field"><label>New passcode</label><input id="newPass" type="password" placeholder="New admin passcode"></div>
+    <button class="btn sky" onclick="changePass()">Update passcode</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  var DEFAULT_PASS='ericken2026';
+  var DEFAULTS={providerName:'Eric K. Nyaberi, PMHNP',phone:'(309) 642-9371',email:'Ericbrend19@gmail.com',address:'3550 Frontier Avenue, Suite A2, Boulder, CO 80301',paymentLink:'',bookingEndpoint:'',commentsEndpoint:'',bio:'Evidence-based psychiatry and medication management in a warm, judgment-free space for anxiety, depression, ADHD, trauma, sleep and mood. In person in Boulder and telehealth across Colorado.'};
+  var POST_TITLES=['5 Signs It May Be Time to See a Psychiatric Provider','Medication Management: What to Expect at Your First Visit','Understanding Anxiety: When Worry Takes Over','Depression Is More Than Sadness — Know the Signs','Adult ADHD: Beyond "Just Being Distracted"','Sleep and Mental Health: Breaking the Cycle','Managing Stress and Burnout Before They Manage You','PTSD and Trauma: Gentle Steps Toward Healing','The Truth About Psychiatric Medication and Stigma','Telepsychiatry: Is Virtual Care Right for You?'];
+  function slugify(t){return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60);}
+  var SLUG2TITLE={};POST_TITLES.forEach(function(t){SLUG2TITLE[slugify(t)]=t;});
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function getCfg(){var c=Object.assign({},DEFAULTS);try{c=Object.assign(c,JSON.parse(localStorage.getItem('eb_cfg')||'{}'));}catch(e){}return c;}
+  function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('show');},2400);}
+
+  function unlock(){
+    var p=document.getElementById('pass').value;
+    var real=localStorage.getItem('eb_pass')||DEFAULT_PASS;
+    if(p===real){document.getElementById('gate').classList.add('hidden');document.getElementById('console').classList.remove('hidden');loadAll();}
+    else toast('Incorrect passcode');
+  }
+  function tab(t){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x.dataset.t===t);});
+    document.querySelectorAll('.tabpane').forEach(function(x){x.classList.add('hidden');});
+    document.getElementById('p-'+t).classList.remove('hidden');
+    if(t==='comments')renderComments();if(t==='bookings')renderBookings();if(t==='kit')renderKit();
+  }
+
+  function loadAll(){
+    var c=getCfg();
+    ['providerName','phone','email','address','bio','paymentLink','bookingEndpoint','commentsEndpoint'].forEach(function(k){var el=document.getElementById('c_'+k);if(el)el.value=c[k]||'';});
+    renderComments();
+  }
+  function saveCfg(){
+    var c=getCfg();
+    ['providerName','phone','email','address','bio','paymentLink','bookingEndpoint','commentsEndpoint'].forEach(function(k){c[k]=document.getElementById('c_'+k).value.trim();});
+    localStorage.setItem('eb_cfg',JSON.stringify(c));toast('Saved — the live site is updated');
+  }
+  function changePass(){var n=document.getElementById('newPass').value.trim();if(n.length<4){toast('Use at least 4 characters');return;}localStorage.setItem('eb_pass',n);document.getElementById('newPass').value='';toast('Passcode updated');}
+
+  /* ---- Comments ---- */
+  function getComments(){try{return JSON.parse(localStorage.getItem('eb_comments')||'{}');}catch(e){return{};}}
+  function saveComments(c){localStorage.setItem('eb_comments',JSON.stringify(c));}
+  function when(ts){return new Date(ts).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+  function renderComments(){
+    var all=getComments(),box=document.getElementById('cmtList'),h='',count=0;
+    Object.keys(all).forEach(function(slug){
+      (all[slug]||[]).forEach(function(c,idx){
+        count++;
+        h+='<div class="cmt"><div class="post">'+esc(SLUG2TITLE[slug]||slug)+'</div>';
+        h+='<div class="who">'+esc(c.name)+' <span class="when">&middot; '+when(c.at)+'</span></div><div class="txt">'+esc(c.text)+'</div>';
+        (c.replies||[]).forEach(function(r){h+='<div class="reply"><div class="who">'+esc(r.by)+'</div><div class="txt">'+esc(r.text)+'</div></div>';});
+        h+='<div class="replybox"><input id="rp-'+slug+'-'+idx+'" placeholder="Write a reply as the provider…"><button class="btn sky sm" onclick="reply(\''+slug+'\','+idx+')">Reply</button><button class="btn danger sm" onclick="delComment(\''+slug+'\','+idx+')">Delete</button></div>';
+        h+='</div>';
+      });
+    });
+    box.innerHTML=count?h:'<p class="empty">No comments yet. When readers comment on the blog, they will appear here to reply to.</p>';
+  }
+  function reply(slug,idx){
+    var inp=document.getElementById('rp-'+slug+'-'+idx);var text=(inp.value||'').trim();if(!text){toast('Write a reply first');return;}
+    var all=getComments();var c=all[slug][idx];(c.replies=c.replies||[]).push({text:text,at:Date.now(),by:getCfg().providerName});
+    saveComments(all);renderComments();toast('Reply posted — it now shows on the blog');
+  }
+  function delComment(slug,idx){
+    var all=getComments();all[slug].splice(idx,1);if(!all[slug].length)delete all[slug];saveComments(all);renderComments();toast('Comment deleted');
+  }
+
+  /* ---- Bookings ---- */
+  function getBookings(){try{return JSON.parse(localStorage.getItem('eb_bookings')||'[]');}catch(e){return[];}}
+  function renderBookings(){
+    var b=getBookings(),box=document.getElementById('bkList');
+    if(!b.length){box.innerHTML='<p class="empty">No saved requests yet.</p>';return;}
+    var h='<table><thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>Email</th><th>Visit</th><th>Pay</th><th>Concern</th></tr></thead><tbody>';
+    b.slice().reverse().forEach(function(r){h+='<tr><td>'+when(r.at)+'</td><td>'+esc(r.name||'')+'</td><td>'+esc(r.phone||'')+'</td><td>'+esc(r.email||'')+'</td><td>'+esc(r.visit||'')+'</td><td>'+esc(r.payMethod||'')+'</td><td>'+esc(r.concern||'')+'</td></tr>';});
+    box.innerHTML=h+'</tbody></table>';
+  }
+  function exportBookings(){
+    var b=getBookings();if(!b.length){toast('Nothing to export');return;}
+    var keys=['at','name','phone','email','visit','payMethod','insurer','memberId','concern'];
+    var csv=keys.join(',')+'\n'+b.map(function(r){return keys.map(function(k){return '"'+String(r[k]||'').replace(/"/g,'""')+'"';}).join(',');}).join('\n');
+    var a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);a.download='erickenb-bookings.csv';a.click();
+  }
+
+  /* ---- Marketing kit ---- */
+  function renderKit(){
+    var c=getCfg();
+    var kit=[
+      ['Instagram / Facebook caption','Feeling anxious, low, or stuck? You don\'t have to navigate it alone. ErickenB Psychiatry offers compassionate, evidence-based psychiatric care with '+c.providerName+' — in Boulder and by telehealth across Colorado. New patients welcome. ☎ '+c.phone+' • erickenbpsychiatry.com #MentalHealth #Boulder #Telepsychiatry'],
+      ['Instagram story','Your mental health matters. Book a confidential visit with '+c.providerName+' today. Link in bio → erickenbpsychiatry.com'],
+      ['Email blurb','At ErickenB Psychiatry, care begins with listening. '+c.providerName+' provides thoughtful medication management and support for anxiety, depression, ADHD, trauma, sleep and mood — in person in Boulder or by secure telehealth across Colorado. Book today: erickenbpsychiatry.com or call '+c.phone+'.'],
+      ['SMS / text','Hi! This is ErickenB Psychiatry. Compassionate psychiatric care with '+c.providerName+' is now accepting new patients in Boulder & across CO. Book: erickenbpsychiatry.com or call '+c.phone+'.'],
+      ['Referral line','Know someone who could use support? ErickenB Psychiatry welcomes new patients across Colorado. '+c.phone+' • erickenbpsychiatry.com']
+    ];
+    document.getElementById('kitList').innerHTML=kit.map(function(k,i){return '<div class="copybox"><div class="lbl">'+k[0]+'</div><pre id="kit-'+i+'">'+esc(k[1])+'</pre><button class="btn ghost sm" onclick="copyKit('+i+')">Copy</button></div>';}).join('');
+  }
+  function copyKit(i){var t=document.getElementById('kit-'+i).textContent;if(navigator.clipboard){navigator.clipboard.writeText(t);}toast('Copied');}
+</script>
+</body>
+</html>

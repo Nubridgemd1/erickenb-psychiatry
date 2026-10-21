@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ErickenB Psychiatry — Eric K. Nyaberi, PMHNP · Compassionate Psychiatric Care in Boulder, CO</title>
+<meta name="description" content="ErickenB Psychiatry — compassionate, evidence-based psychiatric care and medication management with Eric K. Nyaberi, PMHNP. Anxiety, depression, ADHD, trauma, sleep and mood. In-person in Boulder, CO and telepsychiatry across Colorado.">
+<meta property="og:title" content="ErickenB Psychiatry — Eric K. Nyaberi, PMHNP">
+<meta property="og:description" content="Compassionate, evidence-based psychiatric care in Boulder, CO and telehealth across Colorado. New patients welcome.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nubridgemd1.github.io/erickenb-psychiatry/assets/eric-nyaberi.jpg">
+<meta name="theme-color" content="#0e2a5e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e2a5e'/%3E%3Cpath d='M22 62c7-9 14-9 21 0s14 9 21 0 11-6 14-7' stroke='%238fd0f5' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M22 50c7-9 14-9 21 0s14 9 21 0 11-6 14-7' stroke='%234aa6e3' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#0e2a5e; --navy2:#13397f; --navy3:#1b4aa0;
+    --sky:#3f9fe0; --sky2:#7ec8f2; --sky3:#a9dbf7;
+    --skywash:#e9f3fc; --cream:#f6fafe; --paper:#ffffff;
+    --ink:#15233c; --muted:#5b6b85; --line:#dce7f3;
+    --disp:'Fraunces',Georgia,serif; --sans:'Inter',Arial,sans-serif;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;font-weight:400}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.1;color:var(--navy)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:84px 0}
+  .center{text-align:center}
+  .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.26em;font-size:12px;font-weight:700;color:var(--sky)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:600;font-size:14.5px;letter-spacing:.01em;padding:14px 28px;border-radius:40px;border:1.5px solid transparent;cursor:pointer;transition:.2s}
+  .btn.primary{background:var(--navy);color:#fff}
+  .btn.primary:hover{background:var(--navy2);transform:translateY(-2px)}
+  .btn.sky{background:linear-gradient(135deg,var(--sky),var(--navy3));color:#fff;box-shadow:0 10px 26px rgba(31,74,160,.28)}
+  .btn.sky:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(31,74,160,.4)}
+  .btn.ghost{background:transparent;border-color:var(--navy);color:var(--navy)}
+  .btn.ghost:hover{background:var(--navy);color:#fff}
+  .btn.light{background:#fff;color:var(--navy)}
+  .btn.ghost.onblue{border-color:rgba(255,255,255,.7);color:#fff}
+  .btn.ghost.onblue:hover{background:rgba(255,255,255,.14)}
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand svg{width:42px;height:42px;flex:none}
+  .brand .bt{display:flex;flex-direction:column;line-height:1.02}
+  .brand .b1{font-family:var(--disp);font-weight:700;font-size:21px;color:var(--navy);letter-spacing:.2px}
+  .brand .b2{font-family:var(--sans);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--sky);font-weight:700;margin-top:2px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{font-size:14px;color:var(--ink);font-weight:500}
+  .nav-links a:hover{color:var(--sky)}
+  .nav-toggle{display:none;background:none;border:none;font-size:26px;color:var(--navy);cursor:pointer}
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(160deg,#0e2a5e 0%,#163a85 55%,#1b4aa0 100%);color:#fff;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-120px;top:-140px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(126,200,242,.3),transparent 68%)}
+  .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding:82px 0 90px}
+  .hero h1{color:#fff;font-size:clamp(38px,5.4vw,60px);margin:14px 0 16px;letter-spacing:.2px}
+  .hero p.lede{color:#d6e5f7;font-size:18px;max-width:34em;margin-bottom:26px;font-weight:300}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+  .trust span{font-size:12.5px;color:#cfe0f5;border:1px solid rgba(255,255,255,.25);border-radius:30px;padding:7px 14px;display:inline-flex;gap:7px;align-items:center}
+  .portrait{position:relative;justify-self:center}
+  .portrait .frame{position:relative;width:min(380px,82vw);aspect-ratio:4/5;border-radius:220px 220px 26px 26px;overflow:hidden;border:4px solid rgba(143,208,245,.5);box-shadow:0 34px 70px rgba(5,18,46,.55)}
+  .portrait .frame img{width:100%;height:100%;object-fit:cover;object-position:center 18%;filter:grayscale(100%) contrast(1.03)}
+  .portrait .halo{position:absolute;inset:-26px;border-radius:50%;background:radial-gradient(circle,rgba(63,159,224,.45),transparent 66%);z-index:-1;filter:blur(10px)}
+  .portrait .tag{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:#fff;color:var(--navy);font-weight:600;font-size:13px;padding:8px 18px;border-radius:30px;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+  /* STATS */
+  .stats{background:rgba(6,20,52,.5);border-top:1px solid rgba(255,255,255,.12);position:relative;z-index:2}
+  .stats-in{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 24px}
+  .stat{display:flex;align-items:center;gap:12px;color:#fff}
+  .stat .si{font-size:23px}
+  .stat b{font-family:var(--disp);font-size:20px;display:block;line-height:1.05}
+  .stat em{font-style:normal;font-size:12.5px;color:#bcd2ee}
+  /* ABOUT */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+  h2.title{font-size:clamp(28px,3.6vw,42px);margin:10px 0 18px}
+  p.body{color:var(--muted);font-size:16.5px;margin-bottom:14px}
+  .facts{border-left:3px solid var(--sky);padding-left:22px;margin-top:4px}
+  .facts div{margin-bottom:14px}
+  .facts .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);font-weight:700}
+  .facts .v{font-family:var(--disp);font-size:19px;color:var(--navy)}
+  /* PROVIDER FEATURE */
+  .provider{background:linear-gradient(160deg,#eaf3fc,#f6fafe)}
+  .pf-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+  .pf-photo{position:relative}
+  .pf-photo img{width:100%;border-radius:10px;filter:grayscale(100%);box-shadow:0 26px 54px rgba(14,42,94,.25)}
+  .pf-photo .cap{position:absolute;left:20px;bottom:-16px;background:var(--navy);color:#fff;padding:9px 20px;border-radius:30px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .qbox{background:#fff;border-left:3px solid var(--sky);padding:15px 20px;margin:18px 0;color:#3a4a63;font-family:var(--disp);font-style:italic;font-size:19px;border-radius:0 8px 8px 0;box-shadow:0 8px 20px rgba(14,42,94,.07)}
+  /* SERVICES */
+  .svc-bg{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;text-align:left}
+  .svc{background:var(--cream);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.22s}
+  .svc:hover{border-color:var(--sky);transform:translateY(-4px);box-shadow:0 18px 34px rgba(14,42,94,.1)}
+  .svc-img{width:100%;height:180px;object-fit:cover;background:var(--skywash)}
+  .svc-body{padding:24px 22px 26px;position:relative}
+  .svc .ic{position:absolute;top:-26px;left:20px;width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:23px;box-shadow:0 8px 18px rgba(14,42,94,.16)}
+  .svc h3{font-size:20px;margin:6px 0 8px;color:var(--navy)}
+  .svc p{color:var(--muted);font-size:14.5px}
+  /* REEL */
+  .subhead{margin:54px 0 4px;font-family:var(--disp);font-size:25px;color:var(--navy);text-align:center}
+  .subnote{color:var(--muted);font-size:14.5px;text-align:center;margin-bottom:22px}
+  .reel-wrap{position:relative}
+  .reel{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+  .reel::-webkit-scrollbar{display:none}
+  .reel-track{display:flex;gap:16px;width:max-content;padding:8px 2px 12px}
+  .tile{flex:0 0 230px;width:230px;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.2s}
+  .tile:hover{border-color:var(--sky);transform:translateY(-2px);box-shadow:0 12px 22px rgba(14,42,94,.1)}
+  .tile img{width:100%;height:150px;object-fit:cover;background:var(--skywash)}
+  .tile span{display:block;padding:11px 14px;font-size:14px;color:var(--navy);font-weight:600}
+  .reel-nav{position:absolute;top:calc(50% - 14px);transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:24px;cursor:pointer;box-shadow:0 7px 18px rgba(14,42,94,.18);display:flex;align-items:center;justify-content:center;transition:.2s}
+  .reel-nav:hover{background:var(--navy);color:#fff}
+  .reel-nav.prev{left:-10px}.reel-nav.next{right:-10px}
+  /* INSURANCE / PAY */
+  .pay-bg{background:linear-gradient(160deg,#0e2a5e,#13397f);color:#eaf3fc}
+  .pay-bg .eyebrow{color:var(--sky2)}
+  .pay-bg h2{color:#fff}
+  .pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:34px;text-align:left}
+  .panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:28px}
+  .panel h3{color:var(--sky2);font-size:22px;margin-bottom:12px}
+  .panel p{color:#cfe0f5;font-size:15px;margin-bottom:12px}
+  .cards-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+  .cards-row span{font-size:13px;color:#dcebfb;color:#d7e6fa;border:1px solid rgba(255,255,255,.22);border-radius:30px;padding:6px 13px}
+  /* BLOG */
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+  .post{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.22s}
+  .post:hover{box-shadow:0 18px 36px rgba(14,42,94,.12);transform:translateY(-4px)}
+  .post .ph{height:122px;background:linear-gradient(135deg,var(--navy),var(--sky));display:flex;align-items:center;justify-content:center;color:#fff;font-size:40px}
+  .post .pc{padding:22px;display:flex;flex-direction:column;flex:1}
+  .post .cat{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);font-weight:700;margin-bottom:8px}
+  .post h3{font-size:20px;color:var(--navy);margin-bottom:8px;cursor:pointer;line-height:1.2}
+  .post h3:hover{color:var(--sky)}
+  .post p{color:var(--muted);font-size:14px;flex:1}
+  .post .pf{display:flex;align-items:center;justify-content:space-between;margin-top:16px}
+  .readlink{color:var(--sky);font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;border-bottom:1px solid var(--sky)}
+  .share{display:flex;gap:7px}
+  .share button{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:12px;color:var(--navy);display:flex;align-items:center;justify-content:center;transition:.2s}
+  .share button:hover{background:var(--sky);color:#fff;border-color:var(--sky)}
+  /* FOOTER */
+  footer{background:#0b2049;color:#c4d6ef;padding:60px 0 30px}
+  footer .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+  footer h4{font-family:var(--disp);color:var(--sky2);font-size:21px;margin-bottom:12px}
+  footer a{color:#c4d6ef;font-size:14px;line-height:2}
+  footer a:hover{color:#fff}
+  .fbrand .b1{font-family:var(--disp);font-size:24px;color:#fff;font-weight:700}
+  .copyright{border-top:1px solid rgba(255,255,255,.14);margin-top:40px;padding-top:20px;font-size:12.5px;color:#8fa6c7;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .copyright a{color:#8fa6c7;font-size:12.5px}
+  /* MODAL */
+  .ov{position:fixed;inset:0;background:rgba(8,20,46,.6);backdrop-filter:blur(3px);z-index:100;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:40px 16px}
+  .ov.show{display:flex}
+  .modal{background:var(--paper);max-width:640px;width:100%;border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.4);animation:pop .25s ease}
+  @keyframes pop{from{transform:translateY(18px);opacity:0}to{transform:none;opacity:1}}
+  .mhead{background:var(--navy);color:#fff;padding:20px 26px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .mhead h3{color:#fff;font-size:22px}
+  .mclose{background:none;border:none;color:#fff;font-size:26px;cursor:pointer;line-height:1}
+  .mbody{padding:26px}
+  .mbody.post-body p{color:#39455c;font-size:16px;margin-bottom:14px}
+  .mbody.post-body h4{font-family:var(--disp);color:var(--navy);font-size:21px;margin:18px 0 8px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);font-weight:700;margin-bottom:5px}
+  .field input,.field select,.field textarea{width:100%;font-family:var(--sans);font-size:15px;padding:11px 13px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sky)}
+  .seg{display:flex;gap:10px;margin:6px 0 16px}
+  .seg button{flex:1;padding:12px;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--muted)}
+  .seg button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .note{font-size:12.5px;color:var(--muted);margin-top:8px}
+  .share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+  .share-row button{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;padding:9px 13px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;color:var(--navy)}
+  .share-row button:hover{background:var(--skywash)}
+  /* COMMENTS */
+  .cmts{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+  .cmts h4{font-family:var(--disp);color:var(--navy);font-size:20px;margin-bottom:12px}
+  .cmt{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:13px 15px;margin-bottom:11px}
+  .cmt .who{font-weight:700;color:var(--navy);font-size:14px}
+  .cmt .when{color:var(--muted);font-size:11.5px;font-weight:400}
+  .cmt .txt{color:#39455c;font-size:14.5px;margin-top:4px}
+  .reply{margin:10px 0 0 18px;background:#eaf3fc;border-left:3px solid var(--sky);border-radius:0 8px 8px 0;padding:10px 13px}
+  .reply .who{color:var(--navy)}
+  .reply .badge{display:inline-block;background:var(--sky);color:#fff;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:20px;margin-left:6px;vertical-align:middle}
+  .cmt-empty{color:var(--muted);font-size:14px;font-style:italic}
+  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:13px 22px;border-radius:30px;font-size:14px;z-index:200;opacity:0;transition:.3s;pointer-events:none}
+  .toast.show{opacity:1}
+  @media(max-width:920px){
+    .hero-in{grid-template-columns:1fr;gap:38px}.portrait{max-width:360px;margin:0 auto}
+    .two,.pay-grid,.pf-grid{grid-template-columns:1fr;gap:32px}
+    .grid3,.blog-grid{grid-template-columns:1fr 1fr}
+    .nav-links{position:fixed;inset:76px 0 auto 0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);display:none}
+    .nav-links.open{display:flex}
+    .nav-links a{width:100%;padding:16px 24px;border-top:1px solid var(--line)}
+    .nav-links .btn{margin:14px 24px}
+    .nav-toggle{display:block}
+    footer .fgrid{grid-template-columns:1fr}
+    .stats-in{grid-template-columns:1fr 1fr;gap:18px 14px}
+  }
+  @media(max-width:560px){.grid3,.blog-grid{grid-template-columns:1fr}section{padding:60px 0}.stats-in{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- logo symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="eblogo" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#0e2a5e"/><path d="M9 30c4-5 8-5 12 0s8 5 12 0 6-3.5 7-4" stroke="#8fd0f5" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M9 24c4-5 8-5 12 0s8 5 12 0 6-3.5 7-4" stroke="#3f9fe0" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M9 18c4-5 8-5 12 0s8 5 12 0 6-3.5 7-4" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/></symbol></svg>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><svg><use href="#eblogo"/></svg><span class="bt"><span class="b1">ErickenB Psychiatry</span><span class="b2">Eric K. Nyaberi, PMHNP</span></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#insurance">Insurance</a>
+      <a href="#blog">Journal</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="btn sky" onclick="openBook();return false">Book Now</a>
+    </nav>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow">Compassionate Psychiatric Care &middot; Boulder, CO</span>
+      <h1>Clarity, calm, and care that sees all of you.</h1>
+      <p class="lede" id="heroBio">Evidence-based psychiatry and medication management with <b id="heroName">Eric K. Nyaberi, PMHNP</b> — a warm, judgment-free space for anxiety, depression, ADHD, trauma, sleep and mood. In-person in Boulder and telehealth across Colorado.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn sky" onclick="openBook();return false">Book an Appointment</a>
+        <a href="#" class="btn ghost onblue" id="callBtn" onclick="callNow();return false">Call (309) 642-9371</a>
+      </div>
+      <div class="trust">
+        <span>&#9733; Board-certified PMHNP</span>
+        <span>&#128274; Confidential &amp; secure</span>
+        <span>&#128197; New patients welcome</span>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="halo"></div>
+      <div class="frame"><img src="assets/eric-nyaberi.jpg" alt="Eric K. Nyaberi, PMHNP" id="heroPhoto"></div>
+      <span class="tag" id="capName">Eric K. Nyaberi, PMHNP</span>
+    </div>
+  </div>
+  <div class="stats"><div class="wrap stats-in">
+    <div class="stat"><span class="si">&#129504;</span><div><b>Whole-Person</b><em>Evidence-based care</em></div></div>
+    <div class="stat"><span class="si">&#128172;</span><div><b>1-on-1</b><em>Personalized visits</em></div></div>
+    <div class="stat"><span class="si">&#128241;</span><div><b>Telehealth</b><em>Across Colorado</em></div></div>
+    <div class="stat"><span class="si">&#127970;</span><div><b>In-Person</b><em>Boulder, CO</em></div></div>
+  </div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">About the Practice</span>
+      <h2 class="title">You deserve to be heard, supported, and understood.</h2>
+      <p class="body" id="aboutBio">At ErickenB Psychiatry, care begins with listening. Eric K. Nyaberi is a Psychiatric Mental Health Nurse Practitioner (PMHNP) who provides evidence-based, personalized treatment in a warm and nonjudgmental environment. Whether you are navigating anxiety, depression, ADHD, trauma, or a mood or sleep concern, you will find a steady partner in your care.</p>
+      <p class="body">Every plan is tailored to you — thoughtful medication management paired with genuine support, delivered in person in Boulder or by secure telehealth across Colorado.</p>
+      <div style="margin-top:20px"><a href="#" class="btn primary" onclick="openBook();return false">Start Your Visit</a></div>
+    </div>
+    <div>
+      <div class="facts">
+        <div><div class="k">Provider</div><div class="v" id="fName">Eric K. Nyaberi, PMHNP</div></div>
+        <div><div class="k">Credentials</div><div class="v">Psychiatric Mental Health Nurse Practitioner</div></div>
+        <div><div class="k">Office</div><div class="v">3550 Frontier Avenue, Suite A2, Boulder, CO 80301</div></div>
+        <div><div class="k">Serving</div><div class="v">Boulder &amp; all of Colorado (Telehealth)</div></div>
+        <div><div class="k">Ages</div><div class="v">Adults &amp; Adolescents</div></div>
+        <div><div class="k">Focus</div><div class="v">Anxiety &middot; Depression &middot; ADHD &middot; Trauma &middot; Sleep &amp; Mood</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVIDER FEATURE -->
+<section class="provider">
+  <div class="wrap pf-grid">
+    <div class="pf-photo">
+      <img src="assets/eric-nyaberi.jpg" alt="Eric K. Nyaberi, PMHNP">
+      <span class="cap">Eric K. Nyaberi, PMHNP</span>
+    </div>
+    <div>
+      <span class="eyebrow">Meet Your Provider</span>
+      <h2 class="title">Eric K. Nyaberi, PMHNP</h2>
+      <p class="body">Eric is a Psychiatric Mental Health Nurse Practitioner dedicated to helping adults and adolescents achieve lasting emotional wellbeing. He offers thoughtful, evidence-based medication management and compassionate support, meeting each patient with respect, patience, and an unhurried ear.</p>
+      <div class="qbox">&ldquo;Healing begins when you feel truly heard. My role is to walk with you — at your pace, with care shaped around your life.&rdquo;</div>
+      <p class="body">With experience across anxiety, depression, ADHD, trauma, and mood and sleep concerns, Eric builds every plan in partnership with you — honoring your goals, your values, and your story.</p>
+      <div style="margin-top:18px"><a href="#" class="btn sky" onclick="openBook();return false">Book with Eric</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc-bg" id="services">
+  <div class="wrap center">
+    <span class="eyebrow">How We Can Help</span>
+    <h2 class="title">Services &amp; Specialties</h2>
+    <div class="grid3" id="svcGrid"></div>
+    <h3 class="subhead">Specialties we treat</h3>
+    <p class="subnote">Compassionate, evidence-based care across the concerns that bring people to ErickenB Psychiatry. <span style="color:var(--sky)">Swipe the reel &rarr;</span></p>
+    <div class="reel-wrap">
+      <button type="button" class="reel-nav prev" aria-label="Previous" onclick="reelNudge(-1)">&#8249;</button>
+      <div class="reel"><div class="reel-track" id="reelGrid"></div></div>
+      <button type="button" class="reel-nav next" aria-label="Next" onclick="reelNudge(1)">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE / PAY -->
+<section class="pay-bg" id="insurance">
+  <div class="wrap center">
+    <span class="eyebrow">Simple, Transparent Access</span>
+    <h2 class="title">Insurance &amp; Payment</h2>
+    <div class="pay-grid">
+      <div class="panel">
+        <h3>Insurance &amp; Benefits</h3>
+        <p>Tell us your insurance provider when you book and we'll verify your benefits before your first visit — no charge to check.</p>
+      </div>
+      <div class="panel">
+        <h3>Private Pay &amp; Cards</h3>
+        <p>Transparent self-pay rates. Pay securely by card or HSA/FSA when you book your session.</p>
+        <div class="cards-row"><span>Visa</span><span>Mastercard</span><span>Amex</span><span>Discover</span><span>HSA / FSA</span></div>
+        <div style="margin-top:20px"><a href="#" class="btn light" onclick="openBook();return false">Book &amp; Verify</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="wrap center">
+    <span class="eyebrow">The ErickenB Journal</span>
+    <h2 class="title">Insights for a calmer, clearer mind</h2>
+    <p class="body center" style="max-width:40em;margin:0 auto">Practical, compassionate reading on mental wellness — share any article, and leave a comment; Eric replies personally.</p>
+    <div class="blog-grid" id="blogGrid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap fgrid">
+    <div class="fbrand">
+      <div style="display:flex;align-items:center;gap:12px"><svg width="44" height="44"><use href="#eblogo"/></svg><div class="b1">ErickenB Psychiatry</div></div>
+      <p style="margin-top:12px;font-size:14px;color:#9fb6d6;max-width:26em">Compassionate, evidence-based psychiatric care with Eric K. Nyaberi, PMHNP — in Boulder, CO and by telehealth across Colorado.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="#" id="footPhone" onclick="callNow();return false">&#128222; (309) 642-9371</a><br>
+      <a id="footEmail" href="mailto:Ericbrend19@gmail.com">&#9993; Ericbrend19@gmail.com</a><br>
+      <a href="https://maps.google.com/?q=3550 Frontier Avenue Suite A2 Boulder CO 80301" target="_blank" rel="noopener">&#128205; 3550 Frontier Ave, Suite A2<br>&nbsp;&nbsp;&nbsp;Boulder, CO 80301</a><br>
+      <a href="#" onclick="openBook();return false">&#10022; Book an appointment</a>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="#about">About Eric</a><br>
+      <a href="#services">Services</a><br>
+      <a href="#insurance">Insurance &amp; Payment</a><br>
+      <a href="#blog">The ErickenB Journal</a><br>
+      <a href="admin.html">Admin</a>
+    </div>
+  </div>
+  <div class="wrap copyright">
+    <span>&copy; <span id="yr"></span> ErickenB Psychiatry &middot; erickenbpsychiatry.com</span>
+    <span>Confidential &amp; HIPAA-conscious &middot; This site is for information and does not replace emergency care. In a crisis call or text 988.</span>
+  </div>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="ov" id="bookOv">
+  <div class="modal">
+    <div class="mhead"><h3>Book Your Appointment</h3><button class="mclose" onclick="closeBook()">&times;</button></div>
+    <div class="mbody">
+      <form id="bookForm" onsubmit="return submitBooking(event)">
+        <div class="field"><label>Full name</label><input name="name" required placeholder="Your name"></div>
+        <div class="field"><label>Email</label><input name="email" type="email" required placeholder="you@email.com"></div>
+        <div class="field"><label>Phone</label><input name="phone" required placeholder="(000) 000-0000"></div>
+        <div class="field"><label>What brings you in?</label><textarea name="concern" rows="2" placeholder="A few words about what you'd like support with"></textarea></div>
+        <div class="field"><label>Visit type</label><select name="visit"><option>Telehealth (Colorado)</option><option>In-person (Boulder)</option></select></div>
+        <label style="display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);font-weight:700;margin-bottom:5px">How would you like to pay?</label>
+        <div class="seg">
+          <button type="button" class="on" id="segCard" onclick="setPay('card')">&#128179; Card / HSA</button>
+          <button type="button" id="segIns" onclick="setPay('insurance')">&#127973; Insurance</button>
+        </div>
+        <div id="insBlock" style="display:none">
+          <div class="field"><label>Insurance provider</label><input name="insurer" placeholder="Your insurance provider"></div>
+          <div class="field"><label>Member ID</label><input name="memberId" placeholder="Member / subscriber ID"></div>
+          <p class="note">We'll verify your benefits before your first visit — no charge to check.</p>
+        </div>
+        <input type="hidden" name="payMethod" id="payMethod" value="card">
+        <button type="submit" class="btn primary" style="width:100%;justify-content:center;margin-top:8px" id="bookSubmit">Request Appointment</button>
+        <p class="note" id="payNote">We'll confirm your appointment by email or phone.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- POST MODAL -->
+<div class="ov" id="postOv">
+  <div class="modal">
+    <div class="mhead"><h3 id="postTitle"></h3><button class="mclose" onclick="document.getElementById('postOv').classList.remove('show')">&times;</button></div>
+    <div class="mbody post-body" id="postBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* ---------- CONFIG (editable in Admin) ---------- */
+  var DEFAULTS={
+    providerName:'Eric K. Nyaberi, PMHNP',
+    phone:'(309) 642-9371',
+    email:'Ericbrend19@gmail.com',
+    address:'3550 Frontier Avenue, Suite A2, Boulder, CO 80301',
+    paymentLink:'',
+    bookingEndpoint:'',
+    commentsEndpoint:'',
+    bio:'Evidence-based psychiatry and medication management in a warm, judgment-free space for anxiety, depression, ADHD, trauma, sleep and mood. In person in Boulder and telehealth across Colorado.'
+  };
+  var CFG=Object.assign({},DEFAULTS);
+  try{var saved=JSON.parse(localStorage.getItem('eb_cfg')||'{}');CFG=Object.assign(CFG,saved);}catch(e){}
+
+  function pexel(id,w,h){return 'https://images.pexels.com/photos/'+id+'/pexels-photo-'+id+'.jpeg?auto=compress&cs=tinysrgb&fit=crop&w='+w+'&h='+h;}
+
+  var SERVICES=[
+    {ic:'&#128138;',t:'Medication Management',img:5699456,d:'Thoughtful, ongoing psychiatric medication management — started and adjusted collaboratively, never one-size-fits-all.'},
+    {ic:'&#127754;',t:'Anxiety &amp; Depression',img:762020,d:'Evidence-based care to quiet racing thoughts, lift low mood, and help you feel like yourself again.'},
+    {ic:'&#9889;',t:'ADHD (Adults &amp; Teens)',img:3758105,d:'Accurate evaluation and treatment for focus, organization, and follow-through at school, work, and home.'},
+    {ic:'&#128330;',t:'Trauma &amp; PTSD',img:6787202,d:'A safe, steadying space to process trauma and regain a sense of calm and control.'},
+    {ic:'&#127769;',t:'Sleep &amp; Mood',img:2379005,d:'Support for insomnia, mood swings, and bipolar care, with careful monitoring and partnership.'},
+    {ic:'&#128172;',t:'Whole-Person Support',img:3769021,d:'Stress, burnout, grief, self-esteem, and life transitions — care that sees the whole you.'}
+  ];
+  var SPECIALTIES=[
+    {t:'Anxiety',img:1239291},{t:'Depression',img:6382633},{t:'ADHD',img:3958828},
+    {t:'Trauma &amp; PTSD',img:3822622},{t:'Bipolar &amp; Mood',img:3812743},{t:'OCD',img:5428836},
+    {t:'Stress &amp; Burnout',img:3755761},{t:'Grief &amp; Loss',img:4098157},{t:'Life Transitions',img:7155176},
+    {t:'Self-Esteem',img:774909},{t:'Insomnia &amp; Sleep',img:3771069},{t:'Medication Management',img:7176026}
+  ];
+  var POSTS=[
+    {cat:'Getting Started',ic:'&#129658;',t:'5 Signs It May Be Time to See a Psychiatric Provider',ex:'Not sure whether to reach out? Here are five signs it may be time to talk to a provider — and what to expect.',
+      body:'<p>Deciding to seek psychiatric help is a brave, healthy step. Here are a few signs it may be time.</p><h4>1. It is affecting daily life</h4><p>When mood, worry, focus, or sleep start interfering with work, relationships, or the things you enjoy, support can help.</p><h4>2. It has lasted weeks, not days</h4><p>Everyone has hard days. Struggles that linger for two weeks or more deserve attention.</p><h4>3. Coping has stopped working</h4><p>If the strategies that used to help no longer do, a fresh, professional perspective can open new options.</p><h4>4. Others have noticed</h4><p>Gentle concern from people who love you is worth listening to.</p><h4>5. You simply want to feel better</h4><p>You do not need to be in crisis to deserve care. Wanting more peace is reason enough.</p>'},
+    {cat:'Medication',ic:'&#128138;',t:'Medication Management: What to Expect at Your First Visit',ex:'A clear, judgment-free guide to how psychiatric medication management works — from evaluation to follow-up.',
+      body:'<p>Starting medication can feel like a big step. Here is what the process usually looks like.</p><h4>A thorough first conversation</h4><p>Your first visit is mostly listening — your history, symptoms, goals, and what matters to you. There is no rush.</p><h4>Start low, go slow</h4><p>When medication makes sense, we begin carefully and adjust together based on how you feel.</p><h4>Regular check-ins</h4><p>Follow-ups let us fine-tune, watch for side effects, and keep the plan working for your life.</p><h4>You are in the driver seat</h4><p>The goal is you feeling like yourself — not any particular prescription.</p>'},
+    {cat:'Anxiety',ic:'&#127754;',t:'Understanding Anxiety: When Worry Takes Over',ex:'Learn the difference between everyday worry and an anxiety disorder — and how care brings calm.',
+      body:'<p>Worry is normal. But when it becomes constant, hard to control, and disruptive, it may be an anxiety disorder.</p><h4>Signs to notice</h4><p>Racing thoughts, a tight chest, restlessness, irritability, trouble sleeping, or a sense of dread that will not quiet.</p><h4>It is treatable</h4><p>Anxiety responds very well to care — therapy skills, lifestyle steps, and medication when appropriate.</p><h4>A first calming step</h4><p>Try slow breathing: inhale 4, hold 4, exhale 4, hold 4. It signals safety to your nervous system.</p>'},
+    {cat:'Depression',ic:'&#127793;',t:'Depression Is More Than Sadness — Know the Signs',ex:'How to tell ordinary low mood from clinical depression, and when to reach out for support.',
+      body:'<p>Depression is more than a bad week. It lingers and dims the things you used to enjoy.</p><h4>Watch for two weeks or more of</h4><p>Low mood, loss of interest, changes in sleep or appetite, fatigue, guilt, trouble concentrating, or hopelessness.</p><h4>It is not weakness</h4><p>Depression is a medical condition with effective treatment. Reaching out is strength, not failure.</p><h4>If you are in crisis</h4><p>If you ever have thoughts of harming yourself, call or text 988 right away. You are not alone.</p>'},
+    {cat:'ADHD',ic:'&#9889;',t:'Adult ADHD: Beyond "Just Being Distracted"',ex:'Why so many adults are diagnosed late, and what real, effective treatment looks like.',
+      body:'<p>Adult ADHD is far more than distraction — it often hides behind years of coping and self-blame.</p><h4>Common signs</h4><p>Chronic lateness, unfinished projects, time blindness, emotional overwhelm, and exhausting effort to stay organized.</p><h4>Why late diagnosis is common</h4><p>Many adults were never evaluated as children. A proper assessment can be genuinely life-changing.</p><h4>What helps</h4><p>A combination of medication, structure, and self-compassion. You are not lazy — your brain is wired differently.</p>'},
+    {cat:'Sleep',ic:'&#127769;',t:'Sleep and Mental Health: Breaking the Cycle',ex:'Poor sleep worsens anxiety and depression — and vice versa. Here is how to break the loop.',
+      body:'<p>Sleep and mood feed each other. Improving one often improves the other.</p><h4>Protect your wind-down</h4><p>Dim lights an hour before bed; keep screens out of the bedroom.</p><h4>Keep a rhythm</h4><p>The same wake time every day — even weekends — anchors your body clock.</p><h4>When to seek help</h4><p>If sleep problems persist for weeks, they may be part of an underlying condition we can treat.</p>'},
+    {cat:'Burnout',ic:'&#128293;',t:'Managing Stress and Burnout Before They Manage You',ex:'Practical ways to recognize burnout early and protect your wellbeing.',
+      body:'<p>Burnout builds quietly — emotional exhaustion, cynicism, and a sense that nothing you do is enough.</p><h4>Early signs</h4><p>Constant fatigue, irritability, trouble concentrating, and pulling away from people and activities.</p><h4>What helps</h4><p>Boundaries, rest that actually restores, reconnecting with meaning, and support when the load is too heavy.</p><h4>Burnout vs depression</h4><p>They overlap but differ — if low mood follows you everywhere, even away from stress, it may be depression worth treating.</p>'},
+    {cat:'Trauma',ic:'&#128330;',t:'PTSD and Trauma: Gentle Steps Toward Healing',ex:'Trauma recovery is not linear. Compassionate, realistic ways to rebuild a sense of safety.',
+      body:'<p>Healing from trauma is not about "getting over it." It is about feeling safe in your body and life again.</p><h4>Go at your pace</h4><p>There is no timeline. Small, consistent steps build lasting safety.</p><h4>Regulate first</h4><p>Grounding and breathwork calm the nervous system before deeper processing.</p><h4>You do not have to do it alone</h4><p>Support — and sometimes medication — can make the work feel possible.</p>'},
+    {cat:'Stigma',ic:'&#128154;',t:'The Truth About Psychiatric Medication and Stigma',ex:'Taking medication for your mind is as valid as treating any other part of your health.',
+      body:'<p>Needing support for your mental health is human. Medication is one valid, effective tool among many.</p><h4>It does not change who you are</h4><p>The right medication helps you be more yourself, not less.</p><h4>Asking for help is strength</h4><p>You would treat your blood pressure or thyroid. Your brain deserves the same care.</p>'},
+    {cat:'Telehealth',ic:'&#128241;',t:'Telepsychiatry: Is Virtual Care Right for You?',ex:'What to expect from secure video visits — and why so many Coloradans prefer them.',
+      body:'<p>Telepsychiatry brings expert care to wherever you feel most comfortable, anywhere in Colorado.</p><h4>Convenient &amp; private</h4><p>No commute, no waiting room — just a secure, confidential video visit.</p><h4>Just as effective</h4><p>Research shows telepsychiatry works as well as in-person for most conditions.</p><h4>Getting started is simple</h4><p>Book, complete a short intake, and meet from your phone or computer. In-person visits in Boulder are available too.</p>'}
+  ];
+
+  /* ---------- Apply config ---------- */
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function applyCfg(){
+    document.getElementById('heroBio').innerHTML='Evidence-based psychiatry and medication management with <b id="heroName">'+esc(CFG.providerName)+'</b> — a warm, judgment-free space for anxiety, depression, ADHD, trauma, sleep and mood. In-person in Boulder and telehealth across Colorado.';
+    document.getElementById('fName').textContent=CFG.providerName;
+    document.getElementById('capName').textContent=CFG.providerName;
+    document.getElementById('aboutBio').textContent=CFG.bio;
+    document.getElementById('footEmail').textContent='✉ '+CFG.email;
+    document.getElementById('footEmail').href='mailto:'+CFG.email;
+    document.getElementById('callBtn').textContent='Call '+CFG.phone;
+    document.getElementById('footPhone').textContent='☎ '+CFG.phone;
+  }
+  function callNow(){window.location.href='tel:'+CFG.phone.replace(/[^0-9+]/g,'');}
+
+  /* ---------- Render ---------- */
+  document.getElementById('svcGrid').innerHTML=SERVICES.map(function(s){return '<div class="svc"><img class="svc-img" loading="lazy" alt="" src="'+pexel(s.img,620,420)+'"><div class="svc-body"><div class="ic">'+s.ic+'</div><h3>'+s.t+'</h3><p>'+s.d+'</p></div></div>';}).join('');
+  (function(){var t=SPECIALTIES.map(function(s){return '<div class="tile"><img loading="lazy" alt="" src="'+pexel(s.img,420,300)+'"><span>'+s.t+'</span></div>';}).join('');document.getElementById('reelGrid').innerHTML=t+t;startReel();})();
+  function startReel(){
+    var reel=document.querySelector('.reel');if(!reel)return;var track=reel.firstElementChild,n=track.children.length/2;reel._half=0;
+    function calc(){var el=track.children[n];reel._half=el?el.offsetLeft:track.scrollWidth/2;}
+    calc();window.addEventListener('resize',calc);window.addEventListener('load',calc);
+    reel._paused=false;
+    reel.addEventListener('mouseenter',function(){reel._paused=true;});reel.addEventListener('mouseleave',function(){reel._paused=false;});
+    reel.addEventListener('touchstart',function(){reel._paused=true;},{passive:true});reel.addEventListener('touchend',function(){setTimeout(function(){reel._paused=false;},2200);});
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    (function step(){var h=reel._half;if(h>0){if(!reduce&&!reel._paused)reel.scrollLeft+=0.6;if(reel.scrollLeft>=h)reel.scrollLeft-=h;else if(reel.scrollLeft<0)reel.scrollLeft+=h;}requestAnimationFrame(step);})();
+  }
+  function reelNudge(dir){var reel=document.querySelector('.reel');if(!reel)return;var track=reel.firstElementChild,tile=track.children[0];var step=((tile?tile.offsetWidth:230)+16)*3;var h=reel._half||reel.scrollWidth/2;if(dir<0&&reel.scrollLeft<step&&h>0)reel.scrollLeft+=h;reel._paused=true;reel.scrollBy({left:dir*step,behavior:'smooth'});clearTimeout(reel._rt);reel._rt=setTimeout(function(){reel._paused=false;},2000);}
+
+  document.getElementById('blogGrid').innerHTML=POSTS.map(function(p,i){
+    return '<article class="post"><div class="ph">'+p.ic+'</div><div class="pc"><div class="cat">'+p.cat+'</div>'+
+      '<h3 onclick="openPost('+i+')">'+p.t+'</h3><p>'+p.ex+'</p>'+
+      '<div class="pf"><span class="readlink" onclick="openPost('+i+')">Read &#8599;</span>'+
+      '<div class="share">'+shareButtons(i)+'</div></div></div></article>';
+  }).join('');
+
+  /* ---------- Sharing ---------- */
+  function postUrl(i){return location.origin+location.pathname+'#post-'+i;}
+  function shareButtons(i){
+    return '<button title="Share" onclick="nativeShare('+i+')">&#8682;</button>'+
+           '<button title="Facebook" onclick="shareTo(\'fb\','+i+')">f</button>'+
+           '<button title="X" onclick="shareTo(\'x\','+i+')">&#120143;</button>'+
+           '<button title="WhatsApp" onclick="shareTo(\'wa\','+i+')">&#9742;</button>';
+  }
+  function shareTo(net,i){
+    var u=encodeURIComponent(postUrl(i)),t=encodeURIComponent('ErickenB Psychiatry — '+POSTS[i].t);
+    var url={fb:'https://www.facebook.com/sharer/sharer.php?u='+u,x:'https://twitter.com/intent/tweet?url='+u+'&text='+t,wa:'https://wa.me/?text='+t+'%20'+u,li:'https://www.linkedin.com/sharing/share-offsite/?url='+u}[net];
+    window.open(url,'_blank','noopener,width=640,height=560');
+  }
+  function nativeShare(i){var data={title:'ErickenB Psychiatry',text:POSTS[i].t,url:postUrl(i)};if(navigator.share){navigator.share(data).catch(function(){});}else{navigator.clipboard&&navigator.clipboard.writeText(postUrl(i));toast('Link copied — share it anywhere');}}
+
+  /* ---------- Comments (visitor posts + admin replies) ---------- */
+  function postSlug(i){return POSTS[i].t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60);}
+  function getComments(){try{return JSON.parse(localStorage.getItem('eb_comments')||'{}');}catch(e){return{};}}
+  function saveComments(c){try{localStorage.setItem('eb_comments',JSON.stringify(c));}catch(e){}}
+  function when(ts){var d=new Date(ts);return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+  function commentsHtml(i){
+    var slug=postSlug(i),all=getComments(),list=all[slug]||[];
+    var h='<div class="cmts"><h4>Comments ('+list.length+')</h4>';
+    h+='<div class="field"><label>Your name</label><input id="cmtName" placeholder="First name"></div>';
+    h+='<div class="field"><label>Comment</label><textarea id="cmtText" rows="2" placeholder="Share a thought or ask a question"></textarea></div>';
+    h+='<button class="btn sky" style="margin-bottom:16px" onclick="addComment('+i+')">Post comment</button>';
+    if(!list.length){h+='<p class="cmt-empty">Be the first to comment.</p>';}
+    list.forEach(function(c){
+      h+='<div class="cmt"><div class="who">'+esc(c.name)+' <span class="when">&middot; '+when(c.at)+'</span></div><div class="txt">'+esc(c.text)+'</div>';
+      (c.replies||[]).forEach(function(r){h+='<div class="reply"><div class="who">'+esc(r.by||CFG.providerName)+'<span class="badge">Provider</span> <span class="when">&middot; '+when(r.at)+'</span></div><div class="txt">'+esc(r.text)+'</div></div>';});
+      h+='</div>';
+    });
+    h+='</div>';return h;
+  }
+  function addComment(i){
+    var name=(document.getElementById('cmtName').value||'').trim();
+    var text=(document.getElementById('cmtText').value||'').trim();
+    if(!name||!text){toast('Please add your name and a comment');return;}
+    var slug=postSlug(i),all=getComments();(all[slug]=all[slug]||[]).push({id:'c'+Date.now(),name:name,text:text,at:Date.now(),replies:[]});
+    saveComments(all);
+    if(CFG.commentsEndpoint){try{fetch(CFG.commentsEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({post:POSTS[i].t,name:name,text:text})}).catch(function(){});}catch(e){}}
+    document.getElementById('postBody').innerHTML=postContent(i);
+    toast('Thank you — your comment has been posted');
+  }
+
+  /* ---------- Post modal ---------- */
+  function postContent(i){
+    return POSTS[i].body+
+      '<div class="share-row"><span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);align-self:center;font-weight:700">Share:</span>'+
+      '<button onclick="shareTo(\'fb\','+i+')">f Facebook</button>'+
+      '<button onclick="shareTo(\'x\','+i+')">&#120143; Post</button>'+
+      '<button onclick="shareTo(\'li\','+i+')">in LinkedIn</button>'+
+      '<button onclick="shareTo(\'wa\','+i+')">&#9742; WhatsApp</button>'+
+      '<button onclick="copyLink('+i+')">&#128279; Copy link</button>'+
+      '<button onclick="emailShare('+i+')">&#9993; Email</button></div>'+
+      commentsHtml(i);
+  }
+  function openPost(i){
+    document.getElementById('postTitle').textContent=POSTS[i].t;
+    document.getElementById('postBody').innerHTML=postContent(i);
+    document.getElementById('postOv').classList.add('show');
+  }
+  function copyLink(i){var u=postUrl(i);if(navigator.clipboard){navigator.clipboard.writeText(u);}toast('Link copied');}
+  function emailShare(i){window.location.href='mailto:?subject='+encodeURIComponent('Thought you would like this: '+POSTS[i].t)+'&body='+encodeURIComponent(POSTS[i].ex+'\n\n'+postUrl(i));}
+
+  /* ---------- Booking ---------- */
+  function openBook(){document.getElementById('bookOv').classList.add('show');document.getElementById('navLinks').classList.remove('open');}
+  function closeBook(){document.getElementById('bookOv').classList.remove('show');}
+  function setPay(m){
+    document.getElementById('payMethod').value=m;
+    document.getElementById('segCard').classList.toggle('on',m==='card');
+    document.getElementById('segIns').classList.toggle('on',m==='insurance');
+    document.getElementById('insBlock').style.display=(m==='insurance')?'block':'none';
+  }
+  function submitBooking(e){
+    e.preventDefault();var f=e.target,data={};new FormData(f).forEach(function(v,k){data[k]=v;});
+    var done=function(){closeBook();
+      if(data.payMethod==='card'&&CFG.paymentLink){toast('Opening secure payment…');setTimeout(function(){window.open(CFG.paymentLink,'_blank','noopener');},600);}
+      else{toast('Request received — we will confirm your appointment shortly');}
+      f.reset();setPay('card');};
+    if(CFG.bookingEndpoint){fetch(CFG.bookingEndpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)}).then(done).catch(done);}
+    else{try{var reqs=JSON.parse(localStorage.getItem('eb_bookings')||'[]');reqs.push(Object.assign({at:new Date().toISOString()},data));localStorage.setItem('eb_bookings',JSON.stringify(reqs));}catch(e){}done();}
+    return false;
+  }
+
+  /* ---------- toast ---------- */
+  var tT;function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(function(){t.classList.remove('show');},2600);}
+
+  applyCfg();
+  (function(){var m=(location.hash||'').match(/post-(\d+)/);if(m){openPost(+m[1]);}})();
+  ['bookOv','postOv'].forEach(function(id){document.getElementById(id).addEventListener('click',function(e){if(e.target===this)this.classList.remove('show');});});
+</script>
+</body>
+</html>
