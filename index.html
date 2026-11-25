@@ -295,7 +295,7 @@
       <div class="facts">
         <div><div class="k">Provider</div><div class="v" id="fName">Eric K. Nyaberi, APRN, PMHNP-BC</div></div>
         <div><div class="k">Credentials</div><div class="v">APRN, PMHNP-BC &middot; Psychiatric Mental Health Nurse Practitioner</div></div>
-        <div><div class="k">Office</div><div class="v">3550 Frontier Avenue, Suite A2, Boulder, CO 80301</div></div>
+        <div><div class="k">Office</div><div class="v" id="officeAddr">3550 Frontier Avenue, Suite A2, Boulder, CO 80301</div></div>
         <div><div class="k">Serving</div><div class="v">Boulder &amp; all of Colorado (Telehealth)</div></div>
         <div><div class="k">Ages</div><div class="v">Adults &amp; Adolescents</div></div>
         <div><div class="k">Focus</div><div class="v">Anxiety &middot; Depression &middot; ADHD &middot; Trauma &middot; Sleep &amp; Mood</div></div>
@@ -379,7 +379,7 @@
       <h4>Contact</h4>
       <a href="#" id="footPhone" onclick="callNow();return false">&#128222; (309) 642-9371</a><br>
       <a id="footEmail" href="mailto:Ericbrend19@gmail.com">&#9993; Ericbrend19@gmail.com</a><br>
-      <a href="https://maps.google.com/?q=3550 Frontier Avenue Suite A2 Boulder CO 80301" target="_blank" rel="noopener">&#128205; 3550 Frontier Ave, Suite A2<br>&nbsp;&nbsp;&nbsp;Boulder, CO 80301</a><br>
+      <a id="footMap" href="https://maps.google.com/?q=3550 Frontier Avenue Suite A2 Boulder CO 80301" target="_blank" rel="noopener">&#128205; 3550 Frontier Ave, Suite A2<br>&nbsp;&nbsp;&nbsp;Boulder, CO 80301</a><br>
       <a href="#" onclick="openBook();return false">&#10022; Book an appointment</a>
     </div>
     <div>
@@ -503,6 +503,11 @@
     document.getElementById('footEmail').href='mailto:'+CFG.email;
     document.getElementById('callBtn').textContent='Call '+CFG.phone;
     document.getElementById('footPhone').textContent='☎ '+CFG.phone;
+    if(CFG.address){
+      var oa=document.getElementById('officeAddr'); if(oa)oa.textContent=CFG.address;
+      var fm=document.getElementById('footMap');
+      if(fm){fm.href='https://maps.google.com/?q='+encodeURIComponent(CFG.address);fm.innerHTML='&#128205; '+esc(CFG.address);}
+    }
   }
   function callNow(){window.location.href='tel:'+CFG.phone.replace(/[^0-9+]/g,'');}
 
