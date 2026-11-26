@@ -452,6 +452,7 @@
   };
   var CFG=Object.assign({},DEFAULTS);
   try{var saved=JSON.parse(localStorage.getItem('eb_cfg')||'{}');CFG=Object.assign(CFG,saved);}catch(e){}
+  var EB_API='https://erickenb-api.fern-swift.workers.dev';
 
   function pexel(id,w,h){return 'https://images.pexels.com/photos/'+id+'/pexels-photo-'+id+'.jpeg?auto=compress&cs=tinysrgb&fit=crop&w='+w+'&h='+h;}
 
@@ -622,6 +623,18 @@
   var tT;function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(function(){t.classList.remove('show');},2600);}
 
   applyCfg();
+  /* Pull the admin-published config so every visitor, on any device, sees the latest details */
+  (function loadRemoteCfg(){
+    try{
+      fetch(EB_API+'/api/config',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+        if(d&&typeof d==='object'&&!d.error){
+          var changed=false;
+          Object.keys(d).forEach(function(k){if(typeof d[k]==='string'&&CFG.hasOwnProperty(k)){CFG[k]=d[k];changed=true;}});
+          if(changed){applyCfg();try{localStorage.setItem('eb_cfg',JSON.stringify(CFG));}catch(e){}}
+        }
+      }).catch(function(){});
+    }catch(e){}
+  })();
   (function(){var m=(location.hash||'').match(/post-(\d+)/);if(m){openPost(+m[1]);}})();
   ['bookOv','postOv'].forEach(function(id){document.getElementById(id).addEventListener('click',function(e){if(e.target===this)this.classList.remove('show');});});
 </script>
