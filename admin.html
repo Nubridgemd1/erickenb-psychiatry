@@ -125,7 +125,7 @@
   var DEFAULT_PASS='ericken2026';
   var EB_API='https://erickenb-api.fern-swift.workers.dev';
   var ENTERED_PASS='';
-  var DEFAULTS={providerName:'Eric K. Nyaberi, APRN, PMHNP-BC',phone:'(309) 642-9371',email:'Ericbrend19@gmail.com',address:'11052 Cimarron St, Unit-E, Firestone, CO 80504',paymentLink:'',bookingEndpoint:'',commentsEndpoint:'',bio:'Evidence-based psychiatry and medication management in a warm, judgment-free space for anxiety, depression, ADHD, trauma, sleep and mood. In person in Boulder and telehealth across Colorado.'};
+  var DEFAULTS={providerName:'Eric K. Nyaberi, APRN, PMHNP-BC',phone:'(309) 642-9371',email:'Ericbrend19@gmail.com',address:'11052 Cimarron St, Unit-E, Firestone, CO 80504',paymentLink:'',bookingEndpoint:'',commentsEndpoint:'',bio:'Evidence-based psychiatry and medication management in a warm, judgment-free space for anxiety, depression, ADHD, trauma, sleep and mood. In person in Firestone and telehealth across Colorado.'};
   var POST_TITLES=['5 Signs It May Be Time to See a Psychiatric Provider','Medication Management: What to Expect at Your First Visit','Understanding Anxiety: When Worry Takes Over','Depression Is More Than Sadness — Know the Signs','Adult ADHD: Beyond "Just Being Distracted"','Sleep and Mental Health: Breaking the Cycle','Managing Stress and Burnout Before They Manage You','PTSD and Trauma: Gentle Steps Toward Healing','The Truth About Psychiatric Medication and Stigma','Telepsychiatry: Is Virtual Care Right for You?'];
   function slugify(t){return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60);}
   var SLUG2TITLE={};POST_TITLES.forEach(function(t){SLUG2TITLE[slugify(t)]=t;});
@@ -228,10 +228,10 @@
   function renderKit(){
     var c=getCfg();
     var kit=[
-      ['Instagram / Facebook caption','Feeling anxious, low, or stuck? You don\'t have to navigate it alone. ErickenB Psychiatry offers compassionate, evidence-based psychiatric care with '+c.providerName+' — in Boulder and by telehealth across Colorado. New patients welcome. ☎ '+c.phone+' • erickenbpsychiatry.com #MentalHealth #Boulder #Telepsychiatry'],
+      ['Instagram / Facebook caption','Feeling anxious, low, or stuck? You don\'t have to navigate it alone. ErickenB Psychiatry offers compassionate, evidence-based psychiatric care with '+c.providerName+' — in Firestone and by telehealth across Colorado. New patients welcome. ☎ '+c.phone+' • erickenbpsychiatry.com #MentalHealth #Firestone #Telepsychiatry'],
       ['Instagram story','Your mental health matters. Book a confidential visit with '+c.providerName+' today. Link in bio → erickenbpsychiatry.com'],
-      ['Email blurb','At ErickenB Psychiatry, care begins with listening. '+c.providerName+' provides thoughtful medication management and support for anxiety, depression, ADHD, trauma, sleep and mood — in person in Boulder or by secure telehealth across Colorado. Book today: erickenbpsychiatry.com or call '+c.phone+'.'],
-      ['SMS / text','Hi! This is ErickenB Psychiatry. Compassionate psychiatric care with '+c.providerName+' is now accepting new patients in Boulder & across CO. Book: erickenbpsychiatry.com or call '+c.phone+'.'],
+      ['Email blurb','At ErickenB Psychiatry, care begins with listening. '+c.providerName+' provides thoughtful medication management and support for anxiety, depression, ADHD, trauma, sleep and mood — in person in Firestone or by secure telehealth across Colorado. Book today: erickenbpsychiatry.com or call '+c.phone+'.'],
+      ['SMS / text','Hi! This is ErickenB Psychiatry. Compassionate psychiatric care with '+c.providerName+' is now accepting new patients in Firestone & across CO. Book: erickenbpsychiatry.com or call '+c.phone+'.'],
       ['Referral line','Know someone who could use support? ErickenB Psychiatry welcomes new patients across Colorado. '+c.phone+' • erickenbpsychiatry.com']
     ];
     document.getElementById('kitList').innerHTML=kit.map(function(k,i){return '<div class="copybox"><div class="lbl">'+k[0]+'</div><pre id="kit-'+i+'">'+esc(k[1])+'</pre><button class="btn ghost sm" onclick="copyKit('+i+')">Copy</button></div>';}).join('');
